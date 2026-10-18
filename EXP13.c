@@ -6,19 +6,17 @@
 int stack[MAX];
 int top = -1;
 int visited[MAX];
-// Push function
+
 void push(int item)
 {
     stack[++top] = item;
 }
 
-// Pop function
 int pop()
 {
     return stack[top--];
 }
 
-// Check if stack is empty
 int isEmpty()
 {
     return (top == -1);
