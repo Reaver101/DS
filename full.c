@@ -1741,7 +1741,7 @@ void enqueue(int v) {
 
 int dequeue() {
     if (front == -1 || front > rear) {
-        return -1;  // Queue empty
+        return -1; 
     } else {
         return queue[front++];
     }
