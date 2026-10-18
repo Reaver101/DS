@@ -183,11 +183,11 @@ void multiplyMatrix(int A[MAX][MAX], int B[MAX][MAX],
 int r1, int c1, int c2) 
 {
     int result[MAX][MAX];
-    // Initialize result matrix to 0
+    
     for (int i = 0; i < r1; i++)
         for (int j = 0; j < c2; j++)
             result[i][j] = 0;
-  // Matrix multiplication logic
+  
     for (int i = 0; i < r1; i++)
         for (int j = 0; j < c2; j++)
             for (int k = 0; k < c1; k++)
@@ -334,7 +334,7 @@ int main() {
 
             case 4:
                 printf("Exiting the code!\n");
-                return 0; // <-- FIX: Added this to actually break the infinite while(1) loop
+                return 0; 
 
             default:
                 printf("wrong choice\n");
