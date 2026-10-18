@@ -6,7 +6,6 @@
 int queue[MAX], front = -1, rear = -1;
 int visited[MAX];
 
-// Function to enqueue
 void enqueue(int v) {
     if (rear == MAX - 1) {
         printf("Queue overflow\n");
@@ -18,20 +17,17 @@ void enqueue(int v) {
     }
 }
 
-// Function to dequeue
 int dequeue() {
     if (front == -1 || front > rear) {
-        return -1;  // Queue empty
+        return -1; 
     } else {
         return queue[front++];
     }
 }
 
-// BFS function
 void BFS(int adj[MAX][MAX], int n, int start) {
     int i, current;
 
-    // Initialize visited array
     for (i = 0; i < n; i++) {
         visited[i] = 0;
     }
@@ -45,7 +41,6 @@ void BFS(int adj[MAX][MAX], int n, int start) {
         current = dequeue();
         printf("%d ", current);
 
-        // Visit all adjacent vertices
         for (i = 0; i < n; i++) {
             if (adj[current][i] == 1 && !visited[i]) {
                 enqueue(i);
@@ -56,7 +51,6 @@ void BFS(int adj[MAX][MAX], int n, int start) {
     printf("\n");
 }
 
-// Driver code
 int main() {
     int n, i, j, start;
     int adj[MAX][MAX];
